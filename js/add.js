@@ -72,7 +72,7 @@ const allItems = localStorage.getItem(lSS) === null ? [] : JSON.parse(localStora
 console.log(allItems);
 
 addItemForm.addEventListener("submit", (e) => {
-	e.preventDefault();
+	// e.preventDefault();
 	let fullItem = [...allItems];
 	let id;
 
@@ -96,5 +96,5 @@ addItemForm.addEventListener("submit", (e) => {
 
 	localStorage.setItem(lSS, JSON.stringify(items));
 
-	location.assign("../index.html");
+	// location.assign("../index.html");
 });
