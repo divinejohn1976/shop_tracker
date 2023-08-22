@@ -1,7 +1,7 @@
 const sanitizeInput = (val) => {
 	const div = document.createElement("div");
-	div.innerHTML = val;
-	return div.textContent;
+	div.textContent = val;
+	return div.innerHTML;
 };
 
 export default sanitizeInput;
