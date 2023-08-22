@@ -140,6 +140,10 @@ header button {
 	font-size: 20px;
 }
 
+main {
+	min-height: 83vh;
+}
+
 footer > p {
 	text-align: center;
 	/* font-size: 20px; */
@@ -176,3 +180,6 @@ footer > p {
 	font-family: "Times New Roman", Times, serif;
 }
 
+a {
+	text-decoration: none;
+}

@@ -1,11 +1,7 @@
-import getDate from "./utils/getDate.js";
+// import getDate from "./utils/getDate.js";
 import addComa from "./utils/addComa.js";
 
 const itemContainer = document.getElementById("item__container");
-
-add.onclick = () => {
-	location.assign("/views/add.html");
-};
 
 const lSS = "Grocery Items";
 

@@ -5,7 +5,7 @@
 }
 
 body {
-	width: 100%;
+	max-width: 100%;
 	font-size: 16px;
 	background-color: antiquewhite;
 	background-image: linear-gradient(to right, dodgerblue, rgb(5, 191, 191));
@@ -72,6 +72,7 @@ button {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 1rem;
+	max-width: 90%;
 }
 
 @media screen and (min-width: 500px) {
@@ -86,12 +87,12 @@ button {
 	}
 
 	label {
-		font-size: 3em;
+		font-size: 3rem;
 	}
 }
 
 button {
-	padding: 1em;
+	padding: 1rem;
 	font-size: 30px;
 	color: whitesmoke;
 	color-scheme: dark;
@@ -109,7 +110,7 @@ button:focus {
 	cursor: pointer;
 }
 
-p {
+#priceText {
 	font-size: 2em;
 	margin: 30px auto;
 	text-align: center;
@@ -125,4 +126,20 @@ p {
 .disabled:hover,
 .disabled:focus {
 	background-color: red;
+}
+
+a {
+	text-decoration: none;
+}
+
+footer {
+	position: fixed;
+	bottom: 0%;
+	width: 100%;
+}
+
+footer p {
+	font-size: 1.4rem;
+	text-align: center;
+	word-break: keep-all;
 }

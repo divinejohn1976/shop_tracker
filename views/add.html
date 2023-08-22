@@ -27,64 +27,64 @@
 		/>
 		<link
 			rel="shortcut icon"
-			href="./assets/img/shopping-cart-1105049_640.png"
+			href="../assets/img/shopping-cart-1105049_640.png"
 			type="image/x-icon"
 		/>
 	</head>
 	<body>
-		<form
-			action="../index.html"
-			id="addItem"
-		>
-			<div class="li">
-				<label for="itemName">Item name:</label>
-				<input
-					autocomplete="off"
-					autofocus
-					id="itemName"
-					maxlength="30"
-					name="itemName"
-					required
-					title="Name of Item"
-					type="text"
-				/>
-			</div>
+		<main>
+			<form id="addItem">
+				<div class="li">
+					<label for="itemName">Item name:</label>
+					<input
+						autocomplete="off"
+						autofocus
+						id="itemName"
+						maxlength="30"
+						name="itemName"
+						required
+						title="Name of Item"
+						type="text"
+					/>
+				</div>
 
-			<br />
-			<div class="li">
-				<label for="itemQuantity">Quantity:</label>
+				<br />
+				<div class="li">
+					<label for="itemQuantity">Quantity:</label>
 
-				<input
-					autocomplete="off"
-					id="itemQuantity"
-					type="number"
-					name="quantity"
-					required
-				/>
-			</div>
+					<input
+						autocomplete="off"
+						id="itemQuantity"
+						type="number"
+						name="quantity"
+						required
+					/>
+				</div>
 
-			<br />
-			<div class="li">
-				<label for="itemPrice">Cost Per Unit:</label>
+				<br />
+				<div class="li">
+					<label for="itemPrice">Cost Per Unit:</label>
 
-				<input
-					autocomplete="off"
-					id="itemPrice"
-					name="amount"
-					type="number"
-					required
-				/>
-			</div>
+					<input
+						autocomplete="off"
+						id="itemPrice"
+						name="amount"
+						type="number"
+						required
+					/>
+				</div>
 
-			<div id="priceContainer"><p id="priceText">&nbsp;</p></div>
-
-			<button
-				type="submit"
-				id="addButton"
-			>
-				Add
-			</button>
-		</form>
+				<div id="priceContainer"><p id="priceText">&nbsp;</p></div>
+				<a href="../index.html">
+					<button
+						type="submit"
+						id="addButton"
+					>
+						Add
+					</button>
+				</a>
+			</form>
+		</main>
 		<footer>
 			<p class="copyright">&#10031; &copy; Divine Developer <span id="year"></span>&#10031;</p>
 		</footer>
