@@ -1,5 +1,7 @@
 import getDate from "./utils/getDate.js";
 import addComa from "./utils/addComa.js";
+// import sanitizeInput from './utils/sanitizeInput.js'
+import sanitizeInput from "./utils/sanitizeInput.js";
 
 const addItemForm = document.getElementById("addItem");
 const itemName = document.getElementById("itemName");
@@ -85,7 +87,7 @@ addItemForm.addEventListener("submit", (e) => {
 		purchased: false,
 		date: getDate(),
 		id,
-		name: itemName.value,
+		name: sanitizeInput(itemName.value),
 		price: Number.parseFloat(itemPrice.value),
 		quantity: Number.parseFloat(itemQuantity.value),
 		cost: Number.parseFloat(itemQuantity.value) * Number.parseFloat(itemPrice.value),
