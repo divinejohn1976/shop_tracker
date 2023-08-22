@@ -1,0 +1,128 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	font-size: 16px;
+	background-color: antiquewhite;
+	background-image: linear-gradient(to right, dodgerblue, rgb(5, 191, 191));
+	background-blend-mode: color;
+	animation-name: bg-change;
+	animation-timing-function: ease;
+	animation-duration: 10s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes bg-change {
+	0% {
+		background-color: whitesmoke;
+	}
+	25% {
+		background-color: aliceblue;
+	}
+	50% {
+		background-color: azure;
+	}
+	75% {
+		background-color: bisque;
+	}
+	100% {
+		background-color: burlywood;
+	}
+}
+
+label,
+input {
+	font-size: 1.5rem;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+		sans-serif;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+label {
+	color: dodgerblue;
+	font-weight: bolder;
+}
+
+input {
+	border: 3px double dodgerblue;
+	border-radius: 16px;
+	padding: 3px 9px;
+	display: inline-block;
+	outline: 1px solid blue;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	width: 150px;
+	color: dodgerblue;
+	letter-spacing: 0.2ch;
+}
+
+button {
+	margin-top: 10px;
+}
+
+.li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1rem;
+}
+
+@media screen and (min-width: 500px) {
+	input {
+		width: 300px;
+	}
+
+	.li {
+		justify-content: center;
+		gap: 32px;
+		align-items: center;
+	}
+
+	label {
+		font-size: 3em;
+	}
+}
+
+button {
+	padding: 1em;
+	font-size: 30px;
+	color: whitesmoke;
+	color-scheme: dark;
+	background-color: dodgerblue;
+	display: block;
+	margin: 20px auto;
+	border: 0px;
+	border-radius: 10px;
+	width: 200px;
+}
+
+button:hover,
+button:focus {
+	background-color: green;
+	cursor: pointer;
+}
+
+p {
+	font-size: 2em;
+	margin: 30px auto;
+	text-align: center;
+	color: dodgerblue;
+	font-weight: 900;
+	letter-spacing: 0.2ch;
+}
+
+.disabled {
+	opacity: 0.5;
+}
+
+.disabled:hover,
+.disabled:focus {
+	background-color: red;
+}

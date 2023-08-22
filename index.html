@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Grocery List</title>
+		<link
+			rel="stylesheet"
+			href="/styles/index.css"
+		/>
+		<link
+			rel="shortcut icon"
+			href="./assets/img/shopping-cart-1105049_640.png"
+			type="image/x-icon"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1>Grocery List</h1>
+			<section class="button__section">
+				<button id="add">Add New Item</button>
+			</section>
+		</header>
+		<main>
+			<section
+				class="item__container"
+				id="item__container"
+			></section>
+			<section
+				class="total"
+				id="total__container"
+			></section>
+		</main>
+		<footer>
+			<br />
+			<hr />
+			<p class="copyright">&#10031; &copy; Divine Developer <span id="year"></span>&#10031;</p>
+			<hr />
+		</footer>
+		<script
+			src="../js/index.js"
+			type="module"
+		></script>
+		<script>
+			year.innerText = new Date().getFullYear();
+
+			const lSS = "Grocery Items";
+			const updateStorage = (list) => {
+				let fullList = JSON.stringify(list);
+				localStorage.setItem(lSS, fullList);
+			};
+
+			const updateStatus = (id) => {
+				let localSList = localStorage.getItem(lSS);
+				localSList = JSON.parse(localSList);
+				localSList[id].purchased = !localSList[id].purchased;
+				updateStorage(localSList);
+				location.reload();
+			};
+
+			const deleteItem = (id) => {
+				let localSList = localStorage.getItem(lSS);
+				localSList = JSON.parse(localSList);
+
+				let confirmToDelete = confirm(
+					`Are you sure you want to remove ${localSList[id].name} from your list`
+				);
+				if (confirmToDelete) {
+					const newList = localSList.filter((val) => val.id !== id);
+
+					for (i = 0; i < newList.length; i++) {
+						newList[i].id = i;
+					}
+
+					updateStorage(newList);
+					location.reload();
+				} else return;
+			};
+		</script>
+	</body>
+</html>

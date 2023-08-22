@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+
+		<meta
+			property="og:title"
+			content="Grocery List"
+		/>
+		<meta
+			property="og:description"
+			content="Empowering your shopping journey. Your personalized tool to log items, prices, and quantities, ensuring every shopping trip is a success."
+		/>
+		<meta
+			property="og:image"
+			content="./assets/img/shopping-cart-1105049_640.png"
+		/>
+
+		<title>Grocery List</title>
+		<link
+			rel="stylesheet"
+			href="../styles/add.css"
+		/>
+		<link
+			rel="shortcut icon"
+			href="./assets/img/shopping-cart-1105049_640.png"
+			type="image/x-icon"
+		/>
+	</head>
+	<body>
+		<form
+			action="./index.html"
+			id="addItem"
+		>
+			<div class="li">
+				<label for="itemName">Item name:</label>
+				<input
+					autocomplete="off"
+					autofocus
+					id="itemName"
+					maxlength="30"
+					name="itemName"
+					required
+					title="Name of Item"
+					type="text"
+				/>
+			</div>
+
+			<br />
+			<div class="li">
+				<label for="itemQuantity">Quantity:</label>
+
+				<input
+					autocomplete="off"
+					id="itemQuantity"
+					type="number"
+					name="quantity"
+					required
+				/>
+			</div>
+
+			<br />
+			<div class="li">
+				<label for="itemPrice">Cost Per Unit:</label>
+
+				<input
+					autocomplete="off"
+					id="itemPrice"
+					name="amount"
+					type="number"
+					required
+				/>
+			</div>
+
+			<div id="priceContainer"><p id="priceText">&nbsp;</p></div>
+
+			<button
+				type="submit"
+				id="addButton"
+			>
+				Add
+			</button>
+		</form>
+		<footer>
+			<p class="copyright">&#10031; &copy; Divine Developer <span id="year"></span>&#10031;</p>
+		</footer>
+	</body>
+	<script
+		src="../js/add.js"
+		type="module"
+	></script>
+	<script></script>
+</html>
