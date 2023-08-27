@@ -4,9 +4,12 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 16px;
+}
+
 body {
 	max-width: 100%;
-	font-size: 16px;
 	background-color: antiquewhite;
 	background-image: linear-gradient(to right, dodgerblue, rgb(5, 191, 191));
 	background-blend-mode: color;
@@ -39,7 +42,7 @@ body {
 
 label,
 input {
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
 		sans-serif;
 	margin-top: 20px;
@@ -49,7 +52,7 @@ input {
 label {
 	color: dodgerblue;
 	font-weight: bolder;
-	font-size: inherit;
+	
 }
 
 input {
@@ -75,7 +78,7 @@ button {
 	padding: 0 1.3rem;
 	max-width: 90%;
 	width: 80%;
-	font-size: 14px;
+	/* font-size: 14px; */
 }
 
 @media screen and (min-width: 500px) {
