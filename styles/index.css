@@ -101,6 +101,17 @@ header button {
 	margin-bottom: 10px;
 }
 
+.purchased .itemName{
+
+	opacity: 0.7;
+
+}
+
+.purchased > p {
+	text-decoration: 2px red line-through;
+	font-style: italic;
+}
+
 .itemName {
 	font-weight: 900;
 	font-family: Arial, Helvetica, sans-serif;
