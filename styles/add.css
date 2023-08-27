@@ -40,7 +40,7 @@ body {
 label,
 input {
 	font-size: 1.5rem;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
 		sans-serif;
 	margin-top: 20px;
 	font-weight: bold;
@@ -49,7 +49,7 @@ input {
 label {
 	color: dodgerblue;
 	font-weight: bolder;
-	font-size: 32px;
+	font-size: inherit;
 }
 
 input {
@@ -58,7 +58,7 @@ input {
 	padding: 3px 9px;
 	display: inline-block;
 	outline: 1px solid blue;
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	width: 150px;
 	color: dodgerblue;
 	letter-spacing: 0.2ch;
@@ -72,8 +72,10 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 1rem;
+	padding: 0 1.3rem;
 	max-width: 90%;
+	width: 80%;
+	font-size: 14px;
 }
 
 @media screen and (min-width: 500px) {
