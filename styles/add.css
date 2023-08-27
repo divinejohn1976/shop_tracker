@@ -39,7 +39,7 @@ body {
 
 label,
 input {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
 		sans-serif;
 	margin-top: 20px;
@@ -49,6 +49,7 @@ input {
 label {
 	color: dodgerblue;
 	font-weight: bolder;
+	font-size: 32px;
 }
 
 input {
