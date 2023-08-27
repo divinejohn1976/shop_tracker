@@ -7,6 +7,18 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Grocery List</title>
+		<meta
+			property="og:title"
+			content="Grocery List"
+		/>
+		<meta
+			property="og:description"
+			content="Empowering your shopping journey. Your personalized tool to log items, prices, and quantities, ensuring every shopping trip is a success."
+		/>
+		<meta
+			property="og:image"
+			content="../assets/img/shopping-cart-1105049_640.png"
+		/>
 		<link
 			rel="stylesheet"
 			href="./styles/index.css"
@@ -49,13 +61,13 @@
 		<script>
 			year.innerText = new Date().getFullYear();
 
-			const lSS = "Grocery Items";
-			const updateStorage = (list) => {
+			const lSS = 'Grocery Items';
+			const updateStorage = list => {
 				let fullList = JSON.stringify(list);
 				localStorage.setItem(lSS, fullList);
 			};
 
-			const updateStatus = (id) => {
+			const updateStatus = id => {
 				let localSList = localStorage.getItem(lSS);
 				localSList = JSON.parse(localSList);
 				localSList[id].purchased = !localSList[id].purchased;
@@ -63,7 +75,7 @@
 				location.reload();
 			};
 
-			const deleteItem = (id) => {
+			const deleteItem = id => {
 				let localSList = localStorage.getItem(lSS);
 				localSList = JSON.parse(localSList);
 
@@ -71,7 +83,7 @@
 					`Are you sure you want to remove ${localSList[id].name} from your list`
 				);
 				if (confirmToDelete) {
-					const newList = localSList.filter((val) => val.id !== id);
+					const newList = localSList.filter(val => val.id !== id);
 
 					for (i = 0; i < newList.length; i++) {
 						newList[i].id = i;
